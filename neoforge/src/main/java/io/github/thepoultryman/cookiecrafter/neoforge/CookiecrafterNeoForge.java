@@ -1,6 +1,6 @@
-package io.github.com.neoforge;
+package io.github.thepoultryman.cookiecrafter.neoforge;
 
-import io.github.com.Cookiecrafter;
+import io.github.thepoultryman.cookiecrafter.Cookiecrafter;
 import net.neoforged.fml.common.Mod;
 
 @Mod(Cookiecrafter.MOD_ID)

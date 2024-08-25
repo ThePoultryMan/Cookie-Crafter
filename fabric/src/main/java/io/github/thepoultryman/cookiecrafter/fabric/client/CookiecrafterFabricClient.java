@@ -1,4 +1,4 @@
-package io.github.com.fabric.client;
+package io.github.thepoultryman.cookiecrafter.fabric.client;
 
 import net.fabricmc.api.ClientModInitializer;
 

@@ -1,6 +1,6 @@
-package io.github.com.fabric;
+package io.github.thepoultryman.cookiecrafter.fabric;
 
-import io.github.com.Cookiecrafter;
+import io.github.thepoultryman.cookiecrafter.Cookiecrafter;
 import net.fabricmc.api.ModInitializer;
 
 public final class CookiecrafterFabric implements ModInitializer {
