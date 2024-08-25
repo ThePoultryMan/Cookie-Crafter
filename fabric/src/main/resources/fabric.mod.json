@@ -1,0 +1,37 @@
+{
+    "schemaVersion": 1,
+    "id": "cookiecrafter",
+    "version": "${version}",
+    "name": "Cookie Crafter",
+    "description": "Cookie Clicker but in Minecraft",
+    "authors": [
+        "ThePoultryMan"
+    ],
+    "contact": {
+        "homepage": "https://github.com/ThePoultryMan/Cookie-Crafter"
+    },
+    "license": "LGPL-3.0",
+    "icon": "assets/cookiecrafter/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "io.github.com.fabric.CookiecrafterFabric"
+        ],
+        "client": [
+            "io.github.com.fabric.client.CookiecrafterFabricClient"
+        ]
+    },
+    "mixins": [
+        "cookiecrafter.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.16.2",
+        "minecraft": "~1.21.1",
+        "java": ">=21",
+        "architectury": ">=13.0.6",
+        "fabric-api": "*"
+    },
+    "suggests": {
+        "another-mod": "*"
+    }
+}
