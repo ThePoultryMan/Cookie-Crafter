@@ -1,5 +1,7 @@
 .gradle
+build
+
+run
 
 .idea
 .profileconfig.json
-build

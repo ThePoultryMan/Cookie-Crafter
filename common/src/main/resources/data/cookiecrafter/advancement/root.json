@@ -1,0 +1,23 @@
+{
+    "display": {
+        "icon": {
+            "id": "minecraft:cookie"
+        },
+        "title": "Wake and Bake",
+        "description": "Bake one cookie in one ascension.",
+        "background": "minecraft:textures/block/blue_concrete.png",
+        "hidden": true
+    },
+    "criteria": {
+        "has_one_cookie": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "items": "#cookiecrafter:cookies"
+                    }
+                ]
+            }
+        }
+    }
+}
