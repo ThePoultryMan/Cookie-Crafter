@@ -5,6 +5,10 @@ import net.minecraft.nbt.CompoundTag;
 public class PlayerCookieData {
     private int cookies = 0;
 
+    public void addCookies(int amount) {
+        this.cookies += amount;
+    }
+
     public void addCookieData(CompoundTag compoundTag) {
         CompoundTag nestedCompoundTag = new CompoundTag();
         nestedCompoundTag.putInt("cookies", this.cookies);
