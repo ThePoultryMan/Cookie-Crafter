@@ -15,10 +15,10 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "io.github.com.fabric.CookiecrafterFabric"
+            "io.github.thepoultryman.cookiecrafter.fabric.CookiecrafterFabric"
         ],
         "client": [
-            "io.github.com.fabric.client.CookiecrafterFabricClient"
+            "io.github.thepoultryman.cookiecrafter.fabric.CookiecrafterFabricClient"
         ]
     },
     "mixins": [
