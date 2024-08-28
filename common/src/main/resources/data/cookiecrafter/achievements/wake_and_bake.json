@@ -1,3 +1,17 @@
 {
-    "id": "wake_and_bake"
+    "id": "wake_and_bake",
+    "position": {
+        "x": 0,
+        "y": 0
+    },
+    "display": {
+        "title": "achievements.cookiecrafter.wake_and_bake",
+        "description": "achievements.cookiecrafter.wake_and_bake.description",
+        "icon": "minecraft:cookie"
+    },
+    "requirements": [
+        {
+            "type": "cookie_count"
+        }
+    ]
 }
