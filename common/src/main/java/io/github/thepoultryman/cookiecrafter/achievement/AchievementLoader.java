@@ -8,8 +8,10 @@ import io.github.thepoultryman.cookiecrafter.achievement.requirement.Requirement
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 
+import java.io.BufferedReader;
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 public class AchievementLoader {
     public static HashMap<String, Achievement> achievementMap;
@@ -18,7 +20,7 @@ public class AchievementLoader {
         GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.registerTypeAdapter(ResourceLocation.class, new DeserializeHelper.ResourceLocationDeserializer());
         gsonBuilder.registerTypeAdapter(MutableComponent.class, new DeserializeHelper.ComponentDeserializer());
-        gsonBuilder.registerTypeAdapter(Requirement.class, new Requirement());
+        gsonBuilder.registerTypeAdapter(Requirement.class, new Requirement.Deserializer());
 
         Gson gson = gsonBuilder.create();
         AtomicInteger count = new AtomicInteger();

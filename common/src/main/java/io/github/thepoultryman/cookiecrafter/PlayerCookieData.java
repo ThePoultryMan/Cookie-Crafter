@@ -1,17 +1,19 @@
 package io.github.thepoultryman.cookiecrafter;
 
+import io.github.thepoultryman.cookiecrafter.achievement.Achievement;
+import io.github.thepoultryman.cookiecrafter.achievement.AchievementLoader;
+import io.github.thepoultryman.cookiecrafter.achievement.requirement.Requirement;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.StringTag;
 import net.minecraft.nbt.Tag;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class PlayerCookieData {
     private int cookies = 0;
     private List<String> completedAchievements = new ArrayList<>();
+    private AvailableAchievements availableAchievements;
 
     public void addCookies(int amount) {
         this.cookies += amount;
@@ -21,7 +23,6 @@ public class PlayerCookieData {
         CompoundTag nestedCompoundTag = new CompoundTag();
         nestedCompoundTag.putInt("cookies", this.cookies);
         ListTag achievementsTag = new ListTag();
-        achievementsTag.add(StringTag.valueOf("test"));
         for (String completedAchievement : this.completedAchievements) {
             achievementsTag.add(StringTag.valueOf(completedAchievement));
         }
@@ -38,7 +39,25 @@ public class PlayerCookieData {
                 for (Tag achievement : achievements) {
                     this.completedAchievements.add(achievement.getAsString());
                 }
+                this.availableAchievements = new AvailableAchievements(AchievementLoader.achievementMap);
+                this.availableAchievements.filter(this.completedAchievements);
             }
+        }
+    }
+
+    public static class AvailableAchievements {
+        private List<String> cookieCountAchievements = new ArrayList<>();
+
+        public AvailableAchievements(HashMap<String, Achievement> achievements) {
+            for (Map.Entry<String, Achievement> entry : achievements.entrySet()) {
+                if (Arrays.asList(entry.getValue().getRequirementTypes()).contains(Requirement.RequirementType.CookieCount)) {
+                    this.cookieCountAchievements.add(entry.getKey());
+                }
+            }
+        }
+
+        public void filter(List<String> completedAchievements) {
+            this.cookieCountAchievements.removeAll(completedAchievements);
         }
     }
 }

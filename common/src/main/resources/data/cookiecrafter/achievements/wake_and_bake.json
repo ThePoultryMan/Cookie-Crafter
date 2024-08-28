@@ -11,7 +11,8 @@
     },
     "requirements": [
         {
-            "type": "cookie_count"
+            "type": "cookie_count",
+            "amount": 1
         }
     ]
 }
