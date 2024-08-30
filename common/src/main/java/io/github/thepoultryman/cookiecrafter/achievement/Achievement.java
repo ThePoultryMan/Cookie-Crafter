@@ -10,6 +10,14 @@ public class Achievement {
     private Display display;
     private Requirement[] requirements;
 
+    public Position getPosition() {
+        return this.position;
+    }
+
+    public Display getDisplay() {
+        return this.display;
+    }
+
     public Requirement.RequirementType[] getRequirementTypes() {
         Requirement.RequirementType[] requirementTypes = new Requirement.RequirementType[this.requirements.length];
         for (int i = 0; i < this.requirements.length; i++) {

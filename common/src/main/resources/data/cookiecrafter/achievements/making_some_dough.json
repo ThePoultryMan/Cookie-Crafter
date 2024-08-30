@@ -1,0 +1,18 @@
+{
+    "id": "making_some_dough",
+    "position": {
+        "x": 0,
+        "y": 1
+    },
+    "display": {
+        "title": "achievements.cookiecrafter.making_some_dough",
+        "description": "achievements.cookiecrafter.making_some_dough.description",
+        "icon": "cookiecrafter:textures/achievement/making_some_dough.png"
+    },
+    "requirements": [
+        {
+            "type": "cookie_count",
+            "amount": 1000
+        }
+    ]
+}

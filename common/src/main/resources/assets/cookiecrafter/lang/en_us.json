@@ -1,3 +1,10 @@
 {
-    "tag.item.cookiecrafter.cookies": "Cookies"
+    "tag.item.cookiecrafter.cookies": "Cookies",
+    "cookiecrafter.cookie_screen": "Cookie Screen",
+    "cookiecrafter.title": "Cookie Crafter",
+
+    "achievements.cookiecrafter.wake_and_bake": "Wake and Bake",
+    "achievements.cookiecrafter.wake_and_bake.description": "Bake 1 cookie.",
+    "achievements.cookiecrafter.making_some_dough": "Making Some Dough",
+    "achievements.cookiecrafter.making_some_dough.description": "Bake 1000 cookies."
 }

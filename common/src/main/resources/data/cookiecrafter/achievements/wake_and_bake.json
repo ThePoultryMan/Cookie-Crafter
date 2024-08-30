@@ -7,7 +7,7 @@
     "display": {
         "title": "achievements.cookiecrafter.wake_and_bake",
         "description": "achievements.cookiecrafter.wake_and_bake.description",
-        "icon": "minecraft:cookie"
+        "icon": "minecraft:textures/item/cookie.png"
     },
     "requirements": [
         {
